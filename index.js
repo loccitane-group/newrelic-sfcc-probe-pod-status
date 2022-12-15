@@ -1,6 +1,11 @@
-// Put your Salesforce B2C Commerce Cloud POD number in the following variable
-const pod_number = YOUR POD NUMBER HERE;
+// ----------------------------  SETTINGS --------------------------------
 
+/*
+    Put your Salesforce B2C Commerce Cloud POD number in the following variable
+*/
+const POD_NUMBER = YOUR POD NUMBER HERE;
+
+// ----------------------------  PROGRAM --------------------------------
 
 if (https == null) {
     var https = require('https');
@@ -13,7 +18,7 @@ if (querystring == null) {
 const options = {
   hostname: 'api.status.salesforce.com',
   port: 443,
-  path: '/v1/instances/POD' + pod_number + '/status?productKey=B2C_Commerce_Cloud&childProducts=false',
+  path: '/v1/instances/POD' + POD_NUMBER + '/status?productKey=B2C_Commerce_Cloud&childProducts=false',
   method: 'GET'
 }
 
